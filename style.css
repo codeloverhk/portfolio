@@ -1,0 +1,314 @@
+/* Global Properties */
+
+
+body {
+  background: #1f2235;
+  font-family: "Baloo Tamma 2", cursive;
+}
+
+/* Main Heading Font */
+.m-heading {
+  font-family: "Roboto Slab", serif;
+}
+
+/* Navigation */
+.nav-link {
+  border: 2px solid transparent;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #f5ba09;
+  transition: 0.5s ease;
+}
+.nav-item a{
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+/* Main Container height*/
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  align-items: center;
+}
+.btn{
+  font-size: 20px;
+  padding: auto;
+  font-family: sans-serif;
+  border: 2px solid dodgerblue;
+  color: #fff;
+}
+
+.btn:hover{
+  background-color: #fff;
+  color: dodgerblue;
+  transition: 0.9 ease-in;
+
+}
+.btn:active{
+  background-color: rgb(53, 251, 53);
+}
+.image{
+flex: 1 1 120px;
+aspect-ratio: 1/1;
+}
+
+.content{
+  flex: 1 1 200px;
+  text-align: center;
+}
+/* About Section */
+.about {
+  background: #313552;
+  border-radius: 0.5rem;
+}
+
+.card {
+  border-bottom: 8px solid #f5ba09;
+}
+
+/*skills Section*/
+
+.skill-cont{
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+
+.skill-bars{
+  padding: 25px 30px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 80%;
+}
+.bar .progress-line.css span{
+  width: 60%;
+}
+.bar .progress-line.javascript span{
+  width: 65%;
+}
+.bar .progress-line.react span{
+  width: 80%;
+}
+.bar .progress-line.node span{
+  width: 75%;
+}
+
+.bar .progress-line.c span{
+  width: 60%;
+}
+.bar .progress-line.py span{
+  width: 65%;
+}
+.bar .progress-line.mongo span{
+  width: 70%;
+}
+
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "80%";
+}
+.progress-line.css span::after{
+  content: "60%";
+}
+.progress-line.javascript span::after{
+  content: "65%";
+}
+.progress-line.react span::after{
+  content: "80%";
+}
+.progress-line.node span::after{
+  content: "75%";
+}
+.progress-line.c span::after{
+  content: "60%";
+}
+
+.progress-line.py span::after{
+  content: "65%";
+}
+
+.progress-line.mongo span::after{
+  content: "75%";
+}
+
+.mh-skills .mh-pro-skill{
+  padding-right: 60px;
+  color: #fff;
+} 
+
+.mh-skills .pro-skill h3{
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.hk-top-skills{
+  padding-left: 20%;
+  
+}
+
+.hk-top-skills h3{
+  font-size: 30px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 50px;
+}
+
+.top-progress li{
+  display: inline-block;
+  margin: 0 auto;
+  width: 48%;
+  margin-bottom:  30px;
+  text-align: center;
+  float: none;
+}
+
+
+.bar-progress{
+  font: 800 1.3234/1;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+
+
+
+/* Social Media Section */
+
+.social-flex{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  height: 20vh;
+  align-items: center;
+  
+}
+
+.it{
+  flex: 1 1 100px;
+  color: #fff;
+  border: 2px solid yellow;
+  padding: 20px;
+
+}
+
+.social-flex a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-flex a:hover{
+ color: rgb(73, 83, 201);
+}
+
+#social-media {
+  background: #313552;
+}
+
+/* Add color to Social Media Links */
+.media_link {
+  padding: 1rem;
+  max-width: 15rem;
+  margin-left: 1rem;
+  border: 2px solid #f5ba09;
+  border-radius: 0.5rem;
+}
+
+i{
+  color: #fff;
+}
